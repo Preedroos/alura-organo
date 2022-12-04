@@ -1,27 +1,34 @@
 import styled from 'styled-components';
 
-const StyledInput = styled.input`
-  width: 100%;
+const InputStyle = styled.input`
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
   height: 80px;
-  background: #ffffff;
+  background: white;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-  border-width: 0;
+  border: 0;
+  padding-inline: 20px;
 
   &::placeholder {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 20px;
     display: flex;
     align-items: center;
     color: #a4a4a4;
+  }
+
+  &:focus {
+    outline: none;
   }
 `;
 
 function Input({ name, placeholder, required }) {
   return (
-    <StyledInput
+    <InputStyle
       name={name}
       placeholder={placeholder}
       required={required}

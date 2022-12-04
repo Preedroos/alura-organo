@@ -34,11 +34,17 @@ function Form() {
         <DataWrapper>
           <Data>
             <Label>Name</Label>
-            <Input name="name" placeholder="Type your name" required={true} />
+            <Input
+              autocomplete="off"
+              name="name"
+              placeholder="Type your name"
+              required={true}
+            />
           </Data>
           <Data>
             <Label>Position</Label>
             <Input
+              autocomplete="off"
               name="position"
               placeholder="Type your position"
               required={true}
@@ -47,6 +53,7 @@ function Form() {
           <Data>
             <Label>Image</Label>
             <Input
+              autocomplete="off"
               name="image"
               placeholder="Insert the image address"
               required={false}

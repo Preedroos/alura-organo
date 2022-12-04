@@ -1,17 +1,16 @@
-import styled from 'styled-components';
 import Banner from './components/Banner';
 import Form from './components/Form';
-
-const StyledApp = styled.div`
-  width: 100vw;
-`;
+import Teams from './components/Teams';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <StyledApp>
+    <div>
       <Banner />
       <Form />
-    </StyledApp>
+      <Teams />
+      <Footer />
+    </div>
   );
 }
 

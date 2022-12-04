@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 
+const ImageWrapper = styled.header`
+  background-color: #6278f7;
+  display: flex;
+  justify-content: center;
+`;
+
 const Image = styled.img`
-  width: 100%;
-  height: 20%;
+  width: 70%;
 `;
 
 function Banner() {
   return (
-    <header>
+    <ImageWrapper>
       <Image src="/images/banner.png" alt="" />
-    </header>
+    </ImageWrapper>
   );
 }
 
