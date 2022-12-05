@@ -1,15 +1,25 @@
 import Team from './components/Team';
 
+const colors = {
+  blue: '202, 92%, 75%',
+  green: '139, 47%, 55%',
+  orange: '27, 100%, 58%',
+  pear: '81, 57%, 58%',
+  pink: '1, 60%, 65%',
+  purple: '315, 60%, 65%',
+  yellow: '43, 100%, 51%',
+};
+
 function Teams() {
   return (
     <section>
-      <Team title="Programação" color='139, 47%, 55%'/>
-      <Team title="Front-End" color='202, 92%, 75%' />
-      <Team title="Data Science" color='81, 57%, 58%' />
-      <Team title="Devops" color='1, 66%, 65%' />
-      <Team title="Ux e Design" color='315, 60%, 65%' />
-      <Team title="Mobile" color='43, 100%, 51%' />
-      <Team title="Inovação e Gestão" color='27, 100%, 58%' />
+      <Team title="Programação" color={colors['green']} />
+      <Team title="Front-End" color={colors['blue']} />
+      <Team title="Data Science" color={colors['pear']} />
+      <Team title="Devops" color={colors['pink']} />
+      <Team title="Ux e Design" color={colors['purple']} />
+      <Team title="Mobile" color={colors['yellow']} />
+      <Team title="Inovação e Gestão" color={colors['orange']} />
     </section>
   );
 }

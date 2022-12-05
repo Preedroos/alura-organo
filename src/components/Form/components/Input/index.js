@@ -9,6 +9,7 @@ const InputStyle = styled.input`
   background: white;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   border: 0;
+  border-radius: 5px;
   padding-inline: 20px;
 
   &::placeholder {
