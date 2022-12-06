@@ -10,7 +10,7 @@ const TeamStyle = styled.div`
   padding-block: 34px;
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   font-family: 'Prata';
   font-weight: 400;
   font-size: 32px;
@@ -34,37 +34,22 @@ const Cards = styled.div`
   align-items: center;
   margin-block: 6px;
   gap: 24px;
+  flex-wrap: wrap;
 `;
 
-function Team(props) {
+function Team({ cards, color, name }) {
   return (
-    <TeamStyle color={props.color}>
-      <Title color={props.color}>{props.title}</Title>
+    <TeamStyle color={color}>
+      <Title color={color}>{name}</Title>
       <Cards>
-        <Card
-          src="https://avatars.githubusercontent.com/u/69660117?v=4"
-          name="Pedro Cabral"
-          desc="Web Developer"
-          color={props.color}
-        />
-        <Card
-          src="https://avatars.githubusercontent.com/u/69660117?v=4"
-          name="Pedro Cabral"
-          desc="Web Developer"
-          color={props.color}
-        />
-        <Card
-          src="https://avatars.githubusercontent.com/u/69660117?v=4"
-          name="Pedro Cabral"
-          desc="Web Developer"
-          color={props.color}
-        />
-        <Card
-          src="https://avatars.githubusercontent.com/u/69660117?v=4"
-          name="Pedro Cabral"
-          desc="Web Developer"
-          color={props.color}
-        />
+        {cards.map(card => (
+          <Card
+            color={color}
+            src={card.src}
+            name={card.name}
+            position={card.position}
+          />
+        ))}
       </Cards>
     </TeamStyle>
   );

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const CardStyle = styled.div`
   background: linear-gradient(
     to bottom,
-    hsla(${props => props.color}, 1) 40%,
+    hsla(${props => props.color}, 1) 35%,
     white 0
   );
   border-radius: 10px;
@@ -13,7 +13,7 @@ const CardStyle = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 10;
+  gap: 8px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
 `;
 
@@ -33,7 +33,7 @@ const Name = styled.h6`
   margin: 0;
 `;
 
-const Description = styled.p`
+const Position = styled.p`
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -41,12 +41,12 @@ const Description = styled.p`
   color: #212121;
 `;
 
-function Card(props) {
+function Card({ color, name, position, src }) {
   return (
-    <CardStyle color={props.color}>
-      <Image src={props.src} />
-      <Name>{props.name}</Name>
-      <Description>{props.desc}</Description>
+    <CardStyle color={color}>
+      <Image src={src} />
+      <Name>{name}</Name>
+      <Position>{position}</Position>
     </CardStyle>
   );
 }

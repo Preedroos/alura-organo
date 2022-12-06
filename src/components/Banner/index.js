@@ -7,7 +7,7 @@ const ImageWrapper = styled.header`
 `;
 
 const Image = styled.img`
-  width: 70%;
+  width: 60%;
 `;
 
 function Banner() {

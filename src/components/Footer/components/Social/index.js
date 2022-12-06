@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const SocialStyle = styled.div`
   display: flex;
-  gap: 53px;
+  gap: 52px;
   z-index: 2;
 `;
 

@@ -27,13 +27,16 @@ const InputStyle = styled.input`
   }
 `;
 
-function Input({ name, placeholder, required }) {
+function Input({ name, placeholder, required, type, updateState, value }) {
   return (
     <InputStyle
+      autoComplete="off"
       name={name}
+      onChange={event => updateState(event.target.value)}
       placeholder={placeholder}
       required={required}
-      type=""
+      type={type}
+      value={value}
     />
   );
 }

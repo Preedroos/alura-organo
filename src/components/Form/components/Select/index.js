@@ -15,13 +15,19 @@ const SelectStyle = styled.select`
   }
 `;
 
-function Select() {
+function Select({ name, teams, updateState }) {
   return (
-    <SelectStyle required>
-      <option disabled selected></option>
-      <option>option 1</option>
-      <option>option 2</option>
-      <option>option 3</option>
+    <SelectStyle
+      name={name}
+      onChange={event => updateState(event.target.value)}
+      required
+    >
+      <option></option>
+      {teams.map(team => (
+        <option key={team.name} value={team.name}>
+          {team.name}
+        </option>
+      ))}
     </SelectStyle>
   );
 }

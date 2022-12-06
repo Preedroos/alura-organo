@@ -1,26 +1,41 @@
+import styled from 'styled-components';
 import Team from './components/Team';
 
-const colors = {
-  blue: '202, 92%, 75%',
-  green: '139, 47%, 55%',
-  orange: '27, 100%, 58%',
-  pear: '81, 57%, 58%',
-  pink: '1, 60%, 65%',
-  purple: '315, 60%, 65%',
-  yellow: '43, 100%, 51%',
-};
+const Title = styled.h1`
+  color: hsla(231, 90%, 68%);
+  margin-block: 80px;
+  text-align: center;
+  font-family: 'Prata';
+  font-weight: 400;
+  font-size: 40px;
 
-function Teams() {
+  &::after {
+    content: '';
+    position: relative;
+    display: block;
+    border-bottom: 4px solid hsla(231, 90%, 68%);
+    width: 64px;
+    top: 15px;
+    left: calc(50% - 32px);
+  }
+`;
+
+function Teams({ cards, teams }) {
   return (
-    <section>
-      <Team title="Programação" color={colors['green']} />
-      <Team title="Front-End" color={colors['blue']} />
-      <Team title="Data Science" color={colors['pear']} />
-      <Team title="Devops" color={colors['pink']} />
-      <Team title="Ux e Design" color={colors['purple']} />
-      <Team title="Mobile" color={colors['yellow']} />
-      <Team title="Inovação e Gestão" color={colors['orange']} />
-    </section>
+    <main>
+      <Title>My Teams</Title>
+      {teams.map(team => {
+        const teamCards = cards.filter(card => card.team === team.name);
+        return (
+          <Team
+            cards={teamCards}
+            color={team.color}
+            key={team.name}
+            name={team.name}
+          />
+        );
+      })}
+    </main>
   );
 }
 

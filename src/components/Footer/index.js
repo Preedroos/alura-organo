@@ -10,12 +10,18 @@ const FooterStyle = styled.footer`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 426px) {
+    flex-direction: column;
+  }
 `;
 
 const Credits = styled.p`
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: white;
+  z-index: 2;
 `;
 
 function Footer() {

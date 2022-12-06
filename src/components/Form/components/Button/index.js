@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
+const ButtonStyle = styled.button`
   font-family: 'Montserrat';
   background: #6278f7;
   border-width: 0;
@@ -17,5 +17,9 @@ const Button = styled.button`
   text-align: center;
   color: #ffffff;
 `;
+
+function Button({ children, type }) {
+  return <ButtonStyle type={type}>{children}</ButtonStyle>;
+}
 
 export default Button;
