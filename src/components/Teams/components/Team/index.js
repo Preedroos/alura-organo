@@ -45,7 +45,7 @@ function Team({ cards, color, name }) {
         {cards.map(card => (
           <Card
             color={color}
-            src={card.src}
+            image={card.image}
             name={card.name}
             position={card.position}
           />

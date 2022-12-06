@@ -41,10 +41,10 @@ const Position = styled.p`
   color: #212121;
 `;
 
-function Card({ color, name, position, src }) {
+function Card({ color, name, position, image }) {
   return (
     <CardStyle color={color}>
-      <Image src={src} />
+      <Image src={image} alt={name} />
       <Name>{name}</Name>
       <Position>{position}</Position>
     </CardStyle>
