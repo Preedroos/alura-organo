@@ -4,45 +4,45 @@ import Form from './components/Form';
 import Teams from './components/Teams';
 import Footer from './components/Footer';
 
-const teams = [
-  {
-    name: 'Programming',
-    color: '202, 92%, 75%',
-  },
-  {
-    name: 'Front-End',
-    color: '139, 47%, 55%',
-  },
-  {
-    name: 'Data Science',
-    color: '27, 100%, 58%',
-  },
-  {
-    name: 'Devops',
-    color: '81, 57%, 58%',
-  },
-  {
-    name: 'Ux and Design',
-    color: '1, 60%, 65%',
-  },
-  {
-    name: 'Mobile',
-    color: '315, 60%, 65%',
-  },
-  {
-    name: 'Innovation and Management',
-    color: '43, 100%, 51%',
-  },
-];
-
 function App() {
+  const [teams, setTeams] = useState([
+    {
+      name: 'Programming',
+      color: '#85cffa',
+    },
+    {
+      name: 'Front-End',
+      color: '#56c278',
+    },
+    {
+      name: 'Data Science',
+      color: '#ff8929',
+    },
+    {
+      name: 'Devops',
+      color: '#a6d157',
+    },
+    {
+      name: 'Ux and Design',
+      color: '#db7270',
+    },
+    {
+      name: 'Mobile',
+      color: '#db70c1',
+    },
+    {
+      name: 'Innovation and Management',
+      color: '#ffb805',
+    },
+  ]);
+
   const [cards, setCards] = useState([]);
 
   return (
     <>
       <Banner />
       <Form setCards={setCards} teams={teams} />
-      <Teams cards={cards} teams={teams} />
+      <Teams cards={cards} teams={teams} setTeams={setTeams} />
       <Footer />
     </>
   );

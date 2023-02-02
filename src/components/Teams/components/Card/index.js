@@ -1,14 +1,17 @@
+import './TiDelete.css';
 import styled from 'styled-components';
+import { TiDelete } from 'react-icons/ti';
 
 const CardStyle = styled.div`
   background: linear-gradient(
     to bottom,
-    hsla(${props => props.color}, 1) 35%,
+    ${props => props.color} 35%,
     white 0
   );
   border-radius: 10px;
   width: 262px;
   height: 272px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,9 +44,10 @@ const Position = styled.p`
   color: #212121;
 `;
 
-function Card({ color, name, position, image }) {
+function Card({ color, image, name, onDeleteCard: onDelete, position }) {
   return (
     <CardStyle color={color}>
+      <TiDelete className="delete" onClick={onDelete} />
       <Image src={image} alt={name} />
       <Name>{name}</Name>
       <Position>{position}</Position>
